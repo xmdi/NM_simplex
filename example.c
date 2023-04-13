@@ -15,7 +15,7 @@ int main(void){
 			-10,30}; // P_2
 	double (*obj_function)(double[])=&treasure_seeking;
 	double tolerance=1e-10;
-	unsigned char output_flags=0b001; // bit 1 (rightmost): print convergence history during run
+	unsigned char output_flags=0b111; // bit 1 (rightmost): print convergence history during run
 									  // bit 2: if bit 1 high, also track simplex minimum vertex
 									  // bit 3: save simplex history to data structure for later use
 	struct NM_Simplex_Problem* problem=setup_simplex(num_vars,points,obj_function,tolerance);
